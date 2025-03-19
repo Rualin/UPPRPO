@@ -1,9 +1,10 @@
 ```
-mkdir build
-cd build
+cmake -S . -B build"
 ```
 
-версия Visual Studio может отличаться
 ```
-cmake .. -G "Visual Studio 16 2019"
+cd build
+```
+```
+make
 ```
