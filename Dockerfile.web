@@ -1,0 +1,13 @@
+FROM nginx:latest
+
+# Установка Docker CLI
+RUN apt-get update && \
+    apt-get install -y docker.io && \
+    apt-get clean
+
+# RUN sudo chmod 666 /var/run/docker.sock
+# Копирование скрипта запуска
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
