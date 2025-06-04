@@ -1,0 +1,6 @@
+.gitignore
+.github
+README.md
+build
+*.o
+k8s

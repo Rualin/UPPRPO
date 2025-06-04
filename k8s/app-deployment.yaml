@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: candle-app
+  template:
+    metadata:
+      labels:
+        app: candle-app
+    spec:
+      containers:
+      - name: candle-app
+        image: rualiel/test-repo-app:latest
+        command: ["./build/testproj"]
+        
